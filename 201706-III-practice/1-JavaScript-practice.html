@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>javascript</title>
+  <link rel="stylesheet" href="css/1-JavaScript-practice.css">
+    <style type="text/css">
+    body{font-size:22px;}
+      #txt{
+        height:450px;
+        width:650px;
+    	  border:#333 solid 1px;
+    	  padding:5px;
+      }
+      ol{
+    	  line-height:35px;
+      }
+    </style>
+</head>
+<body>
+  <div class="next">
+    <a href="../201707-I-practice/CSS_Homework.html">click me next</a>
+  </div>
+  <h2 id="con">JavaScript練習</H2>
+    <div id="txt">
+      <h5>JavaScript為網頁添加動態效果並實現與用戶交互的功能。</h5>
+        <ol type="1">
+          <li>JavaScript入門篇，讓不懂JS的你，快速了解JS。</li>
+          <li>JavaScript進階篇，讓你掌握JS的基礎語法、函数、數組、事件、内置對象、BOM瀏覽器、DOM操作。</li>
+          <li>學完以上兩門基礎課後，在深入學習JavaScript的變量作用域、事件、對象、運動、cookie、正則表達式、ajax等課程。</li>
+        </ol>
+    </div>
+  <form>
+  <!--當點擊相應按鈕，執行對應操作，為按鈕添加相應事件-->
+    <input type="button" name="changecolor" value="改變顏色" onclick="changeC()">
+    <input type="button" name="changeWH" value="改變寬高" onclick="cWH()">
+    <input type="button" name="hidetext" value="隱藏內容" onclick="hide()">
+    <input type="button" name="showtext" value="顯示內容" onclick="show()">
+    <input type="button" name="restart" value="重置內容" onclick="re()">
+  </form>
+<script type="text/javascript">
+//定義"改變顏色"的函數
+  function changeC(){
+    var p1 = document.getElementById("txt").style.color = "#9f88ff";
+    var p1 = document.getElementById("txt").style.background = "#ddd";
+    /*另一種寫法
+  function changeC(){
+    var p1 = document.getElementById("txt");
+    mychar.style.color="#9f88ff";
+    mychar.style.backgroundColor="#ddd";
+  }
+    */
+  }
+//定義"改變寬高"的函數
+  function cWH(){
+    var p1 = document.getElementById("txt").style.height = "550px";
+    var p1 = document.getElementById("txt").style.width = "750px";
+    /*另一種寫法
+    var p1 = document.getElementById("txt");
+    p1.style.height = "550px";
+    p1.style.width = "750px";
+    */
+  }
+//定義"隱藏內容"的函數
+  function hide(){
+    var p1 = document.getElementById("txt").style.display = "none";
+    /*另一種寫法
+    var p1 = document.getElementById("txt");
+    p1.style.display = "none";
+    */
+  }
+//定義"顯示內容"的函數
+  function show(){
+    var p1 = document.getElementById("txt").style.display = "block";
+    /*另一種寫法
+    var p1 = document.getElementById("txt");
+    p1.style.display = "block";
+    */
+  }
+//定義"重置按鈕"的函數
+  function re(){
+    var p1 = confirm("確定要恢復默認設定值？");
+    if(p1 == true){
+      document.getElementById("txt").removeAttribute("style");
+    }
+    else{}
+  }
+</script>
+</body>
+</html>
